@@ -1,27 +1,41 @@
 package org.info.javajedi.model.entity;
 
-public class Jugador extends Equipo{
-	
-    
-        private String nombre;
-	private String apellido;
+public class Jugador {
+    private String nombre;
+    private String apellido;
 	private String altura;
 	private String posicion;
 	private int cantGol;
 	private int cantPartido;
-	private boolean esCapitan;
+	private String esCapitan;
 	private int numeroCamiseta;
-	// Equipo equipo ;
+    Equipo equipo;
 
-    public Jugador(String nombre, String apellido, String altura, String posicion, int numGol, int cantPartido, boolean esCapitan, int numeroCamiseta) {
+    public Jugador(String nombre, String apellido, String altura, String posicion, int cantGol, int cantPartido, String esCapitan, int numeroCamiseta) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.altura = altura;
         this.posicion = posicion;
-        this.cantGol = numGol;
+        this.cantGol = cantGol;
         this.cantPartido = cantPartido;
         this.esCapitan = esCapitan;
         this.numeroCamiseta = numeroCamiseta;
+    }
+
+    public int getCantGol() {
+        return cantGol;
+    }
+
+    public void setCantGol(int cantGol) {
+        this.cantGol = cantGol;
+    }
+
+    public String getEsCapitan() {
+        return esCapitan;
+    }
+
+    public void setEsCapitan(String esCapitan) {
+        this.esCapitan = esCapitan;
     }
 
     public Jugador() {
@@ -75,13 +89,7 @@ public class Jugador extends Equipo{
         this.cantPartido = cantPartido;
     }
 
-    public boolean isEsCapitan() {
-        return esCapitan;
-    }
 
-    public void setEsCapitan(boolean esCapitan) {
-        this.esCapitan = esCapitan;
-    }
 
     public int getNumeroCamiseta() {
         return numeroCamiseta;
