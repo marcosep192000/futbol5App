@@ -1,8 +1,22 @@
 package org.info.javajedi.model.entity;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class Equipo {
 	private String nombreEquipo;
-	private String fechaCreacion;
+	private Date fechaCreacion;
+    List<Jugador> jugadorList;
+
+	public Equipo(String nombreEquipo, Date fechaCreacion, List<Jugador> jugadorList) {
+		this.nombreEquipo = nombreEquipo;
+		this.fechaCreacion = fechaCreacion;
+		this.jugadorList = jugadorList;
+	}
+
+	public Equipo() {
+	}
 
 	public String getNombreEquipo() {
 		return nombreEquipo;
@@ -12,19 +26,19 @@ public class Equipo {
 		this.nombreEquipo = nombreEquipo;
 	}
 
-	public String getFechaCreacion() {
+	public Date getFechaCreacion() {
 		return fechaCreacion;
 	}
 
-	public void setFechaCreacion(String fechaCreacion) {
+	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
 
-	@Override
-	public String toString() {
-		return "Equipo{" +
-				"nombre='" + nombreEquipo + '\'' +
-				", fechaCreacion='" + fechaCreacion + '\'' +
-				'}';
+	public List<Jugador> getJugadorList() {
+		return jugadorList;
+	}
+
+	public void setJugadorList(List<Jugador> jugadorList) {
+		this.jugadorList = jugadorList;
 	}
 }
