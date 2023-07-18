@@ -1,20 +1,24 @@
 package org.info.javajedi.model.entity;
-
 public class Entrenador {
-
     private String nombre;
     private String apellido;
     private int edad;
+    private Equipo equipo;
 
-    public Entrenador(String nombre, String apellido, int edad) {
+//--------------------------------------------------------------//
+
+    public Entrenador(String nombre, String apellido, int edad, Equipo equipo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+        this.equipo = equipo;
     }
 
     public Entrenador() {
     }
 
+    //--------------------------------------------------------------//
+    
     public String getNombre() {
         return nombre;
     }
@@ -39,12 +43,11 @@ public class Entrenador {
         this.edad = edad;
     }
 
-    @Override
-    public String toString() {
-        return "Entrenador{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", edad=" + edad +
-                '}';
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
     }
 }

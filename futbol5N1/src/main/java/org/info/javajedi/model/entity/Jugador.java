@@ -9,7 +9,7 @@ public class Jugador {
 	private int cantPartido;
 	private String esCapitan;
 	private int numeroCamiseta;
-    Equipo equipo;
+     private Equipo equipo;
 
     public Jugador(String nombre, String apellido, String altura, String posicion, int cantGol, int cantPartido, String esCapitan, int numeroCamiseta) {
         this.nombre = nombre;
