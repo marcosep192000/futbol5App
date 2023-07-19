@@ -9,9 +9,9 @@ public class Jugador {
 	private int cantPartido;
 	private String esCapitan;
 	private int numeroCamiseta;
-     private Equipo equipo;
 
-    public Jugador(String nombre, String apellido, String altura, String posicion, int cantGol, int cantPartido, String esCapitan, int numeroCamiseta) {
+
+    public Jugador(String nombre, String apellido, String altura, String posicion, int cantGol, int cantPartido, String esCapitan, int numeroCamiseta, Equipo equipo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.altura = altura;
@@ -20,22 +20,7 @@ public class Jugador {
         this.cantPartido = cantPartido;
         this.esCapitan = esCapitan;
         this.numeroCamiseta = numeroCamiseta;
-    }
 
-    public int getCantGol() {
-        return cantGol;
-    }
-
-    public void setCantGol(int cantGol) {
-        this.cantGol = cantGol;
-    }
-
-    public String getEsCapitan() {
-        return esCapitan;
-    }
-
-    public void setEsCapitan(String esCapitan) {
-        this.esCapitan = esCapitan;
     }
 
     public Jugador() {
@@ -73,12 +58,12 @@ public class Jugador {
         this.posicion = posicion;
     }
 
-    public int getNumGol() {
+    public int getCantGol() {
         return cantGol;
     }
 
-    public void setNumGol(int numGol) {
-        this.cantGol = numGol;
+    public void setCantGol(int cantGol) {
+        this.cantGol = cantGol;
     }
 
     public int getCantPartido() {
@@ -89,7 +74,13 @@ public class Jugador {
         this.cantPartido = cantPartido;
     }
 
+    public String getEsCapitan() {
+        return esCapitan;
+    }
 
+    public void setEsCapitan(String esCapitan) {
+        this.esCapitan = esCapitan;
+    }
 
     public int getNumeroCamiseta() {
         return numeroCamiseta;
@@ -99,6 +90,8 @@ public class Jugador {
         this.numeroCamiseta = numeroCamiseta;
     }
 
+
+
     @Override
     public String toString() {
         return "Jugador{" +
@@ -106,13 +99,11 @@ public class Jugador {
                 ", apellido='" + apellido + '\'' +
                 ", altura='" + altura + '\'' +
                 ", posicion='" + posicion + '\'' +
-                ", numGol=" + cantGol +
+                ", cantGol=" + cantGol +
                 ", cantPartido=" + cantPartido +
-                ", esCapitan=" + esCapitan +
+                ", esCapitan='" + esCapitan + '\'' +
                 ", numeroCamiseta=" + numeroCamiseta +
+
                 '}';
     }
-
-
-
 }

@@ -2,8 +2,8 @@ package org.info.javajedi;
 
 import org.info.javajedi.model.entity.Equipo;
 import org.info.javajedi.model.entity.Jugador;
-import org.info.javajedi.service.equipo.Impl.EquipoService;
-import org.info.javajedi.service.jugador.impl.JugadorService;
+import org.info.javajedi.model.service.impl.EquipoServiceImpl;
+
 
 import java.util.Scanner;
 
@@ -30,8 +30,8 @@ public class App
                 switch(option) {
                     case 1:
                         System.out.println("Ha seleccionado la opción 1 Crear Equipo:" );
-                        EquipoService equipo = new EquipoService();
-                        equipo.create();
+                        EquipoServiceImpl equipo = new EquipoServiceImpl();
+                       equipo.create();
 
                         break;
                     case 2:
