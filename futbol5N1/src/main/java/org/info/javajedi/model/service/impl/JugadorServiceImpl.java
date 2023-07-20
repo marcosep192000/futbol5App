@@ -1,23 +1,27 @@
 package org.info.javajedi.model.service.impl;
 
+import org.info.javajedi.model.entity.Equipo;
 import org.info.javajedi.model.entity.Jugador;
 import org.info.javajedi.model.service.IJugadorService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class JugadorServiceImpl implements IJugadorService {
+
+	Scanner scanner = new Scanner(System.in);
+	Jugador jugador = new Jugador();
 	@Override
-	public  Jugador create() {
-		Scanner scanner = new Scanner(System.in);
-		Jugador jugador = new Jugador();
+	public Jugador create() {
 
 
+		System.out.println("INGRESE EL NOMBRE DEL JUGADOR: ");
+		jugador.setNombre(scanner.nextLine());
+
+		System.out.println("INGRESE EL ALPELLIDO DEL JUGADOR: ");
+		jugador.setApellido(scanner.nextLine());
 			System.out.println("INGRESE SU POSICION: ");
 			jugador.setPosicion(scanner.nextLine());
-			System.out.println("INGRESE EL NOMBRE DEL JUGADOR: ");
-			jugador.setNombre(scanner.nextLine());
-			System.out.println("INGRESE EL ALPELLIDO DEL JUGADOR: ");
-			jugador.setApellido(scanner.nextLine());
 			System.out.println("INGRESE LA ALTURA: ");
 			jugador.setAltura(scanner.nextLine());
 			System.out.println("INGRESE LA CANTIDAD DE GOLES: ");
@@ -28,10 +32,14 @@ public class JugadorServiceImpl implements IJugadorService {
 			jugador.setEsCapitan(scanner.nextLine());
 			System.out.println("INGRESE INGRESE EL NUMERO DE CAMISETA: ");
 			jugador.setNumeroCamiseta(scanner.nextInt());
-			System.out.println("Debe cargar todos los jugadores antes de salir.");
-			System.out.println("presione 1 para cancelar  2 para continuar con la carga");
-
 		return jugador;
 	}
 
+	@Override
+	public List<Jugador> lista() {
+
+
+		return null
+			;
+	}
 }

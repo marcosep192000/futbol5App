@@ -50,4 +50,14 @@ public class Entrenador {
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
+
+    @Override
+    public String toString() {
+        return "Entrenador{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", equipo=" + equipo +
+                '}';
+    }
 }

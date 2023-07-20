@@ -8,12 +8,15 @@ public class Equipo {
 	private LocalDate fechaCreacion;
     private List<Jugador> jugadorList;
 
+	private Entrenador entrenador;
+
 	//-----------------------------------------//
 
-	public Equipo(String nombreEquipo, LocalDate fechaCreacion, List<Jugador> jugadorList) {
+	public Equipo(String nombreEquipo, LocalDate fechaCreacion, List<Jugador> jugadorList, Entrenador entrenador) {
 		this.nombreEquipo = nombreEquipo;
 		this.fechaCreacion = fechaCreacion;
 		this.jugadorList = jugadorList;
+		this.entrenador = entrenador;
 	}
 
 	public Equipo() {
@@ -41,12 +44,21 @@ public class Equipo {
 		this.jugadorList = jugadorList;
 	}
 
+	public Entrenador getEntrenador() {
+		return entrenador;
+	}
+
+	public void setEntrenador(Entrenador entrenador) {
+		this.entrenador = entrenador;
+	}
+
 	@Override
 	public String toString() {
 		return "Equipo{" +
 				"nombreEquipo='" + nombreEquipo + '\'' +
 				", fechaCreacion=" + fechaCreacion +
 				", jugadorList=" + jugadorList +
+				", entrenador=" + entrenador +
 				'}';
 	}
 }
