@@ -1,4 +1,4 @@
-package org.info.javajedi.model.service;
+package org.info.javajedi.service;
 
 import org.info.javajedi.model.entity.Entrenador;
 

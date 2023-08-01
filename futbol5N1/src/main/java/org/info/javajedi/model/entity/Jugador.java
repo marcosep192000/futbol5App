@@ -1,5 +1,4 @@
 package org.info.javajedi.model.entity;
-
 public class Jugador {
     private String nombre;
     private String apellido;
@@ -10,8 +9,7 @@ public class Jugador {
 	private String esCapitan;
 	private int numeroCamiseta;
 
-
-    public Jugador(String nombre, String apellido, String altura, String posicion, int cantGol, int cantPartido, String esCapitan, int numeroCamiseta, Equipo equipo) {
+    public Jugador(String nombre, String apellido, String altura, String posicion, int cantGol, int cantPartido, String esCapitan, int numeroCamiseta) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.altura = altura;
@@ -20,12 +18,10 @@ public class Jugador {
         this.cantPartido = cantPartido;
         this.esCapitan = esCapitan;
         this.numeroCamiseta = numeroCamiseta;
-
     }
 
     public Jugador() {
     }
-
     public String getNombre() {
         return nombre;
     }
@@ -90,8 +86,6 @@ public class Jugador {
         this.numeroCamiseta = numeroCamiseta;
     }
 
-
-
     @Override
     public String toString() {
         return "Jugador{" +
@@ -103,7 +97,6 @@ public class Jugador {
                 ", cantPartido=" + cantPartido +
                 ", esCapitan='" + esCapitan + '\'' +
                 ", numeroCamiseta=" + numeroCamiseta +
-
                 '}';
     }
 }

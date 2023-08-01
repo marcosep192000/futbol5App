@@ -1,5 +1,10 @@
 package org.info.javajedi.model.entity;
+
+import java.util.UUID;
+
 public class Entrenador {
+
+    UUID  id = UUID.randomUUID();
     private String nombre;
     private String apellido;
     private int edad;
@@ -7,12 +12,14 @@ public class Entrenador {
 
 //--------------------------------------------------------------//
 
-    public Entrenador(String nombre, String apellido, int edad, Equipo equipo) {
+    public Entrenador(UUID id, String nombre, String apellido, int edad, Equipo equipo) {
+        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.equipo = equipo;
     }
+
 
     public Entrenador() {
     }
@@ -47,6 +54,14 @@ public class Entrenador {
         return equipo;
     }
 
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
@@ -54,7 +69,8 @@ public class Entrenador {
     @Override
     public String toString() {
         return "Entrenador{" +
-                "nombre='" + nombre + '\'' +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", edad=" + edad +
                 ", equipo=" + equipo +

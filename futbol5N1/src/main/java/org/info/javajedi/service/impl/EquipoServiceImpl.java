@@ -1,17 +1,14 @@
-package org.info.javajedi.model.service.impl;
+package org.info.javajedi.service.impl;
 
 import org.info.javajedi.model.entity.Entrenador;
 import org.info.javajedi.model.entity.Equipo;
 import org.info.javajedi.model.entity.Jugador;
-import org.info.javajedi.model.service.IEquipoService;
+import org.info.javajedi.service.IEquipoService;
 
-
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class EquipoServiceImpl implements IEquipoService {
@@ -29,32 +26,31 @@ Jugador jugador;
 	System.out.println("=======================================");
 	//cargar entrenador//
 	EntrenadorServiceImpl entrenador =new EntrenadorServiceImpl();
-	 equipo.setEntrenador(entrenador.create());
-
+	Entrenador entrenador1=  equipo.setEntrenador(entrenador.create());
+	equipo.setEntrenador(entrenador1);
 	for (int contador = 0; contador < 2; contador++) {
 		JugadorServiceImpl jugadorService = new JugadorServiceImpl();
 		System.out.println("***********************");
 		System.out.println("Jugador N° " + contador);
 		System.out.println("***********************");
 		listJugadores.add(jugadorService.create());
+
+
 	}
 // mostrar listado jugador //
 	System.out.println("****************************************************************************************************************************************************");
 	System.out.println("*     Equipo : " + equipo.getNombreEquipo() + "    *");
 	System.out.println("****************************************************************************************************************************************************");
 	for (int i = 0; listJugadores.size() > i; i++){
+
 		System.out.println(listJugadores.get(i).toString().toUpperCase().replace("]", "").replace(",", ""));}
 
 	System.out.println("****************************************************************************************************************************************************");
-	System.out.println("*  " + equipo.getEntrenador().toString().replace("]", "").replace(",", "").replace("{",": ")+ "   *");
+	System.out.println("*  " + equipo.getEntrenador().getNombre().toString().replace("]", "").replace(",", "").replace("{",": ")+ "   *");
 	System.out.println("****************************************************************************************************************************************************");
 
 
 }
-
-
-
-
 
 	@Override
 	public List<Jugador> listJugador() {

@@ -1,13 +1,11 @@
 package org.info.javajedi.model.entity;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 public class Equipo {
 	private String nombreEquipo;
 	private LocalDate fechaCreacion;
     private List<Jugador> jugadorList;
-
 	private Entrenador entrenador;
 
 	//-----------------------------------------//
@@ -48,8 +46,9 @@ public class Equipo {
 		return entrenador;
 	}
 
-	public void setEntrenador(Entrenador entrenador) {
+	public Entrenador setEntrenador(Entrenador entrenador) {
 		this.entrenador = entrenador;
+		return entrenador;
 	}
 
 	@Override
